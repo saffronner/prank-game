@@ -130,6 +130,7 @@ def update(dt, gamestate: GameState):
                 if path is not None:
                     gamestate.player.move_withpath(path)
                 else:
+                    # yes this is horrendous. yes it was a quick fix.
                     backupleft = left_tile - 1
                     backuptop = top_tile + 0
                     if backupleft > 0:
